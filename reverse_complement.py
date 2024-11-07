@@ -18,7 +18,7 @@ def reverse_complement(dna_sequence):
         if base in translation_dict.keys():
             new_base = translation_dict[base]
         
-        # Sonst was anderes
+        # Sonst was anderes !!!
         else:
             new_base = "_"
         complement += new_base
