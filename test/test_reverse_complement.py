@@ -8,3 +8,10 @@ class TestReverseComplement(unittest.TestCase):
         dna_sequence = "ATGATCTCGTAA"
         reverse_complement_sequence = reverse_complement(dna_sequence)
         self.assertEqual(reverse_complement_sequence, "TTACGAGATCAT")
+
+
+    def test_reverse_complement_unkown_letter(self):
+        """Reverse Complement of a DNA sequence more robust"""
+        dna_sequence = "ATGATCTCGTAAa"
+        reverse_complement_sequence = reverse_complement(dna_sequence)
+        self.assertEqual(reverse_complement_sequence, "_TTACGAGATCAT")
