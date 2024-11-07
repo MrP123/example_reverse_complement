@@ -2,6 +2,7 @@
 This script should provide the function "reverse_complement" that takes a DNA sequence as input and returns the reverse complement of the sequence.
 """
 
+
 def reverse_complement(dna_sequence):
     """A Function that returns the reverse complement of a DNA sequence"""
 
@@ -14,8 +15,10 @@ def reverse_complement(dna_sequence):
             new_base = "A"
         elif base == "G":
             new_base = "C"
-        else:
+        elif base == "C":
             new_base = "G" 
+        else:
+            new_base = "_"
         
         complement += new_base
 
@@ -23,7 +26,7 @@ def reverse_complement(dna_sequence):
     return complement[::-1]
 
 if __name__ == "__main__":
-    dna_sequence = "ATGATCTCGTAA"
+    dna_sequence = "ATGATCTCGTAAaaaaa"
     reverse_complement_sequence = reverse_complement(dna_sequence)
     print(dna_sequence)
     print(reverse_complement_sequence)
